@@ -1,0 +1,59 @@
+Updating Lifecycle Hook Methods 
+With latest updates of the latest
+React version 
+
+These hooks are triggered as a result of change in props 
+or change in state of the component 
+
+1. getDerivedStateFromProps(props,state)
+
+This method is triggered when we have the props and the state 
+and there is a change in the props.This method is called every time 
+a component is re-rendered 
+Set the state This method is used when the state depends on the component 
+Do not cause any side effects in this method i.e reaching out to server and all 
+This method is rarely used in updating phase 
+This method is mostly used in mounting phase of the component 
+
+2. shouldComponentUpdate method(nextProps,nextState) 
+
+This method is triggered when the component receives new 
+props or new state and decides whether at all the component 
+should update or not with those changes.By default,all the components 
+re-render whenever their props or state changes. 
+
+This method dictates if the component should rerender or not .
+Compare the existingProps and existing State values with 
+the nextProps and nextState and let React dictate whether to 
+update the component or not. 
+This method is for performance optimization 
+Do not cause side effects i.e HTTP requests Calling the setState 
+method 
+
+render 
+read props and state and return JSX 
+Do not change the state or interact with the DOM or make 
+AJAX calls here. 
+
+getSnapshotBeforeUpdate(prevProps,prevState) 
+
+Called right before the changes from the Virtual DOM 
+are to be reflected in the DOM 
+Rarely used method 
+This is used only when you need to capture some information 
+from the DOM 
+Method will either return null or return a value. 
+Returned value will be passed as the third argument to the next 
+method 
+
+componentDidUpdate(prevProps,prevState,snapshot)
+
+Called after the render is finished in the re-render cycles 
+You can make sure that the components and its child components have 
+properly rendered itself. 
+Called only once during each re-render cycle. 
+Side effects can be placed inside this method 
+You can make AJAX calls inside this method 
+But here you will have to compare the prevProps with the newProps 
+and then decide whether to make the AJAX call or not. 
+So as to prevent unnessary requests from occuring 

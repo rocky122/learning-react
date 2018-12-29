@@ -1,0 +1,11 @@
+Unmounting Phase methods 
+
+componentWillUnmount 
+
+Method is invoked immediately before a component is unmounted 
+and destroyed 
+In this method you can perform some cleanup tasks like cancelling network 
+requests, removing event handlers, cancelling any subscriptions and also invalidate 
+timers. 
+Do not call the setState method because the component is never re-rendered once it has unmounted. 
+
