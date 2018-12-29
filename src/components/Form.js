@@ -55,4 +55,12 @@ class Form extends Component {
   }
 }
 
+// Lifecycle methods 
+// #Mounting - constructor, static getDerivedStateFromProps, render and componentDidMount
+// #Updating - static getDerivedStateFromProps, shouldComponentUpdate, render, getSnapshotBeforeUpdate and componentDidUpdate
+// #Unmounting - componentWillUnmount
+// #Error Handling - static getDerivedStateFromError, componentDidCatch
+
+
+
 export default Form;

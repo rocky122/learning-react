@@ -1,0 +1,58 @@
+React 16.7 + Lifecycle Hooks (Latest Version)
+
+Lifecycle Mounting Phase 
+
+constructor(props)
+
+1.A special function that will get called 
+whenever a new component is created. 
+
+2.It is used for initializing the state 
+and binding the event handlers for the class instance 
+
+3. Do not cause side effects within the constructor 
+i.e HTTP requests 
+
+4. Call a special function super which calls the base class 
+   constructor.Directly overwrite this.state .It is the only 
+   hook where the initial state for the component is defined 
+   in all other places use this.setState 
+
+
+static getDerivedStateFromProps(props,state)
+
+1.When the state of the component depends on changes 
+in props over time. 
+2. Since this method is static method, you do not 
+have access to this keyword and hence you cannot call 
+this.setState from this hook. Here you just return the object 
+that represents the new state of the component. 
+3. Do not cause side effects eg. HTTP requests 
+
+render method 
+
+1.Only required method in the class that must be implemented            
+2.We read the props and state and return JSX 
+3.It is a pure function for the same state and the props 
+it will render the same UI 
+4.Do not change state using setState or interact with 
+DOM or making side effects (http requests)
+5.Right after the execution of the parent's render 
+method, the lifecycle methods of the children 
+components is triggered. 
+
+componentDidMount Lifecycle Hook 
+
+Called only once during the whole lifecycle of the
+given component and it is invoked immediately after 
+a component and all its children components have 
+been rendered to the DOM. 
+This method is the perfect place to cause side effects 
+i.e interact with the DOM or perform any AJAX calls to 
+load data 
+
+    
+
+
+
+

@@ -12,6 +12,8 @@ import Stylesheet from "./components/Stylesheet";
 import Inline from "./components/Inline";
 import styles from "./components/appStyles.module.css";
 import Form from "./components/Form";
+import LifecycleA from "./components/LifecycleA";
+
 class App extends Component {
   state = {
     status: "not-subscribed",
@@ -67,6 +69,7 @@ class App extends Component {
         {/* Using the css module stylesheet way */}
         <h1 className={styles.success}>Success</h1>
         <Form/>
+        <LifecycleA/>
       </div>
     );
   }
