@@ -13,6 +13,8 @@ import Inline from "./components/Inline";
 import styles from "./components/appStyles.module.css";
 import Form from "./components/Form";
 import LifecycleA from "./components/LifecycleA";
+import FragmentDemo from "./components/FragmentDemo";
+import Table from "./components/Table";
 
 class App extends Component {
   state = {
@@ -70,6 +72,8 @@ class App extends Component {
         <h1 className={styles.success}>Success</h1>
         <Form/>
         <LifecycleA/>
+        <FragmentDemo/>
+        <Table/>
       </div>
     );
   }
