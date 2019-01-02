@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 function Columns() {
   return (
-    <Fragment>
+    <>
       <td>Name</td>
       <td>Rocky</td>
-    </Fragment>
+    </>
   )
 }
 

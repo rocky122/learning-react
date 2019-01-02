@@ -15,6 +15,7 @@ import Form from "./components/Form";
 import LifecycleA from "./components/LifecycleA";
 import FragmentDemo from "./components/FragmentDemo";
 import Table from "./components/Table";
+import ParentComp from "./components/ParentComp";
 
 class App extends Component {
   state = {
@@ -74,6 +75,7 @@ class App extends Component {
         <LifecycleA/>
         <FragmentDemo/>
         <Table/>
+        <ParentComp/>
       </div>
     );
   }

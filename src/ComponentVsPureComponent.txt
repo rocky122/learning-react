@@ -1,0 +1,43 @@
+What is the difference between the Component class 
+and the Pure Component class ? 
+
+When should we use one over the other ? 
+
+Regular Component 
+A regular component should not implement the shouldComponentUpdate method 
+It always return true by default.
+
+Pure Component 
+A PureComponent on the other hand implements shouldComponentUpdate 
+method with a shallow props and state comparison 
+Does a shallow comparison the previousState with the current state 
+Does a shallow comparison of the previousProps with the current props 
+
+SHALLOW COMPARISON just as in Java 
+
+PRIMITIVE TYPES 
+a SC b returns true if a and b have the same value and are of 
+the same type. 
+
+COMPLEX TYPES (Objects and Arrays)
+a SC b returns true if a and b references the same object 
+
+If the comparison indicates there is a difference then the component 
+will re-render 
+
+If we make the parent component a pure component, 
+then it gets the ability of shallow comparison, 
+this means if the parent does not re-render the children 
+will also not rerender.  
+
+PureComponents by preventing you unnecessary re-renders can give 
+you a performance boost in certain scenarios 
+
+Do not mutate object or arrays in props or state in case of PureComponent 
+because it wont check for references (does not deep comparison 
+check).Always return a new object or an array when dealing with pure 
+components using ... in case of objects or .map in case of arrays 
+
+WHAT PURE COMPONENTS IS TO CLASS BASED COMPONENTS 
+MEMO IS TO FUNCTIONAL BASED COMPONENTS 
+
