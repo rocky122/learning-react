@@ -1,0 +1,25 @@
+Refs 
+
+Refs make it possible to access the dom nodes within React 
+Common use case is focussing the text input 
+
+For example : 
+Suppose we have a login form and when it gets loaded we want the username 
+field to get foccussed by default. 
+It is common to create the refs within the constructor so that it can be accessed 
+inside the component throughout 
+React.createRef()
+You create a reference using React.createRef
+
+
+Second Approach is the Callback Refs 
+React will call the callbackref method will null when the component 
+unmounts and with the current element when the component mounts. 
+Create a property 
+Then create a method that assigns the property with the DOM element 
+that is passed as a parameter 
+
+Refs to a class component 
+
+Forwarding Refs Technique
+
