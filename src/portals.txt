@@ -1,0 +1,8 @@
+React Portals 
+
+Portal is used to define new hierrarchy for components 
+wherein you can nest other components but inside some other 
+root component of the application and not the App Component. 
+The App Component is mounted onto the Root DOM node. You can 
+unmount any component from the root dom node and mount it 
+to some other root element using React Portals. 

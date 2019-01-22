@@ -1,0 +1,41 @@
+React 16.6+ Features 
+
+Error Boundaries 
+
+Error Handling Phase Methods 
+
+static getDerivedStateFromError 
+componentDidCatch method 
+
+Error boundaries will catch the error and will display the 
+fallback UI which in our case is the text that something 
+did went wrong. 
+
+Where to place them ? 
+ErrorBoundary can serve as a wrapper for all of the components 
+that may give rise to some errors. 
+If there is an error, everything inside the ErrorBoundary gets 
+hidden and the fallback ui gets rendered. This however might not 
+be ideal behaviour that you might be looking for. 
+
+componentDidCatch is the next method that is used in error handling 
+phase which takes in two parameters error and the info 
+
+componentDidCatch(error,info) {
+
+}
+For logging the errors or calling the error logging service.
+
+For event handlers like onClick of buttons we can only use try catch 
+for catching the regular errors. 
+
+Summary 
+Error Boundaries are React Components that catch Javascript Error 
+in their component tree,log those errors, and display a fallback 
+UI 
+A class component becomes an error boundary by defining either 
+or both getDerivedStateFromError and componentDidCatch lifecycle 
+methods. 
+The placement of error boundary also matters as it controls if the 
+entire application should have the fallback UI or just the component 
+causing the problem. 

@@ -1,0 +1,14 @@
+Why Higher Order Components ? 
+
+HOC 
+A higher order component is a pattern where a function takes a 
+component as an argument and returns a new component. 
+
+SYNTAX 
+const newComponent = higherOrderComponent(originalComponent);
+
+Typically hoc adds some extra functionality or some data to the original 
+component so the new component can also be referred to as enhanced component. 
+
+const enhancedComponent = higherOrderComponent(originalComponent);
+
